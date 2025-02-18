@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function MainPageView() {
   const [title1, setTitle1] = useState(false);
@@ -6,13 +7,17 @@ export default function MainPageView() {
   const [title3, setTitle3] = useState(false);
   const [title4, setTitle4] = useState(false);
 
+  const navigate = useNavigate();
+
   return (
     <div className={`bg-white w-full h-screen overflow-hidden`}>
       {/* Top Div */}
       <div>
         <div className={`w-full h-[6rem] flex items-center px-[4rem] border-b-2 justify-between`}>
           <p className={`font-bold text-[1.5rem] font-serif`}>DooCanDoIt PortPolio</p>
-          <p className={`font-bold text-[1.5rem] font-serif cursor-pointer hover:text-blue-500 duration-300 `}>Profile</p>
+          <p className={`font-bold text-[1.5rem] font-serif cursor-pointer hover:text-blue-500 duration-300`} onClick={() => navigate("/profile")}>
+            Profile
+          </p>
         </div>
       </div>
       {/* Bottom Div */}
