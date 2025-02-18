@@ -1,15 +1,12 @@
-
-import './App.css'
-import MainPageView from "./components/mainpage/views/MainPageView.tsx";
+import "./App.css";
+import Router from "./components/Router.tsx";
 
 function App() {
-
-
   return (
-   <div>
-       <MainPageView/>
-   </div>
-  )
+    <div>
+      <Router />
+    </div>
+  );
 }
 
-export default App
+export default App;
