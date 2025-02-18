@@ -25,7 +25,7 @@ export default function MainPageView() {
           <p
             className={`absolute text-[10rem] h-[19rem] overflow-hidden flex flex-col justify-center items-center w-full font-bold text-white transition-transform duration-300 ${title1 ? "translate-x-0 opacity-100 animate-loop-scroll" : "translate-x-[100%] opacity-0"}`}
           >
-            My workstyle and Personality
+            My WorkStyle and Personality
           </p>
         </div>
         <div className={`flex justify-end w-full h-[19rem] items-center border-b-2 relative`} onMouseEnter={() => setTitle2(true)} onMouseLeave={() => setTitle2(false)}>
