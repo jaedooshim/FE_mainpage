@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../../Header.tsx";
 
 export default function MainPageView() {
   const [title1, setTitle1] = useState(false);
@@ -12,18 +13,16 @@ export default function MainPageView() {
   return (
     <div className={`bg-white w-full h-screen overflow-hidden`}>
       {/* Top Div */}
-      <div>
-        <div className={`w-full h-[6rem] flex items-center px-[4rem] border-b-2 justify-between`}>
-          <p className={`font-bold text-[1.5rem] font-serif`}>DooCanDoIt PortPolio</p>
-          <p className={`font-bold text-[1.5rem] font-serif cursor-pointer hover:text-blue-500 duration-300`} onClick={() => navigate("/profile")}>
-            Profile
-          </p>
-        </div>
-      </div>
+      <Header />
       {/* Bottom Div */}
       <div className={`flex flex-col w-full h-[calc(100vh-6rem)]`}>
-        <div className={`flex justify-center w-full h-[19rem] items-center border-b-2 relative`} onMouseEnter={() => setTitle1(true)} onMouseLeave={() => setTitle1(false)}>
-          <div className={`absolute bg-blue-500 h-[19rem] w-full transition-opacity duration-300 ${title1 ? "opacity-100" : "opacity-0"}`} />
+        <div
+          className={`flex justify-center w-full h-[19rem] items-center border-b-2 relative cursor-pointer`}
+          onClick={() => navigate("/own")}
+          onMouseEnter={() => setTitle1(true)}
+          onMouseLeave={() => setTitle1(false)}
+        >
+          <div className={`absolute bg-blue-500 h-[19rem] w-full transition-opacity duration-300 cursor-pointer ${title1 ? "opacity-100" : "opacity-0"}`} />
 
           <p className={`text-[10rem] font-bold transition-transform duration-300 ${title1 ? "animate-fade-down-rotate" : "translate-y-0 opacity-100"}`}>Who I Am</p>
 
