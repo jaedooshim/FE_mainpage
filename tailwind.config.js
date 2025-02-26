@@ -6,6 +6,7 @@ export default {
       animation: {
         "loop-scroll": "loop-scroll 5s linear infinite",
         "fade-down-rotate": "fade-down-rotate 0.5s ease forwards",
+        "zoom-in": "zoom-in 0.5s ease forwards",
       },
       keyframes: {
         "loop-scroll": {
@@ -15,6 +16,17 @@ export default {
         "fade-down-rotate": {
           "0%": { transform: "rotateX(0) translateY(0)", opacity: 1 },
           "100%": { transform: "rotateX(70deg) translateY(5rem)", opacity: 0 },
+        },
+        "zoom-in": {
+          "0%": {
+            opacity: 0,
+            transform: "scale3d(0.3, 0.3, 0.3)",
+          },
+
+          "80%": {
+            opacity: 0.8,
+            transform: "scale3d(1, 1, 1)",
+          },
         },
       },
     },
