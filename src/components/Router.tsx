@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Profile from "./profile/views/Profile.tsx";
+import Profile from "./profile/views/ProfileView.tsx";
 import MainPageView from "./mainpage/views/MainPageView.tsx";
 
 export default function Router() {
