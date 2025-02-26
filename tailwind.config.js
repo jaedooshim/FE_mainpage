@@ -7,6 +7,7 @@ export default {
         "loop-scroll": "loop-scroll 5s linear infinite",
         "fade-down-rotate": "fade-down-rotate 0.5s ease forwards",
         "zoom-in": "zoom-in 0.5s ease forwards",
+        "small-bounce": "small-bounce 0.7s ease forwards 5",
       },
       keyframes: {
         "loop-scroll": {
@@ -26,6 +27,17 @@ export default {
           "80%": {
             opacity: 0.8,
             transform: "scale3d(1, 1, 1)",
+          },
+        },
+        "small-bounce": {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            transform: "translateY(0)",
           },
         },
       },
